@@ -283,12 +283,7 @@
     top: 0%;
     
 }
-.screen {
-    left: 14%;
-    top: 0%;
-    height: 250px
-    width: auto;
-}
+
     .intro-box {
         margin-top: 10%;
         margin-right: 0%;
@@ -346,6 +341,26 @@
         font-size: 160%;
     }
 
+}
+
+@media screen and (max-width: 365px) {
+    main h1 {
+        font-size: 4rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+        margin-right: -50%;
+    }
+    .intro-box {
+        min-width: 90%;
+        padding: 3%;
+        margin-top: 20%;
+    }
+    .screen {
+        max-height: 60%;
+        max-width: 35%;
+    }
 }
 
 
