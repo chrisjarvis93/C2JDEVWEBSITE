@@ -1,0 +1,367 @@
+
+/* MOBILE FIX — stops intro-box from running into the text */
+@media (max-width: 1600px) {
+
+    /* Fix headings */
+    main h1 {
+        margin-bottom: 20%;
+        font-size: 8rem;
+        
+        text-align: center;
+    }
+    main h2 {
+      
+        margin-left: -30%;
+        font-size: 5rem;
+        text-align: left;
+    }
+    #motto {
+        margin-left: -25%;
+        font-size: 1.2rem;
+    }
+    .intro-box {
+        margin-left: 20%;
+        max-width: 40%;
+    }
+    .content4 {
+        width: 100%;
+}
+}  .screen {
+    left: 12%;
+    
+    width: 221px;}
+
+@media (max-width:  1200px) {
+        /* Fix headings */
+    main h1 {
+        margin-bottom: 25%;
+        font-size: 8rem;
+        
+        text-align: center;
+    }
+    main h2 {
+      
+        margin-left: -45%;
+        font-size: 5rem;
+        text-align: left;
+    }
+    #motto {
+        margin-left: -40%;
+        font-size: 1.2rem;
+    }
+    .intro-box {
+    
+        max-width: 40%;
+    }
+    
+
+   
+
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+        /* Fix headings */
+    main h1 {
+        margin-bottom: 30%;
+        font-size: 6rem;
+        
+        text-align: center;
+    }
+    main h2 {
+      
+        margin-left: -30%;
+        font-size: 4rem;
+        text-align: left;
+    }
+    #motto {
+        margin-left: -45%;
+    
+        font-size: 1.2rem;
+    }
+    .intro-box {
+    
+        max-width: 40%;
+    }
+ 
+}
+@media only screen and (max-width: 600px) {
+    .maincontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+            
+    
+    }
+
+    #navBar {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        background: rgba(2, 2, 2, 0.333);
+        grid-area: navBar;
+        
+
+        display: flex;
+    
+    
+
+    
+
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    width:100%;
+    animation: fade 12s ease-in-out;
+}
+    .boxy {
+        margin: 0 0 10px 0;
+        justify-content: flex-start;
+        margin-bottom: 0%;
+    }
+    
+    .btn {
+        transform: scale(50%);
+        padding: 10px 20px;
+        justify-content: flex-start;
+    }
+    
+    .navlinks {
+        gap: 15px;
+        font-size: 14px;
+        flex-direction: row;
+        
+    }
+
+
+    #main {
+        background: #122c5733;
+        height: 80vh;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+
+    main h1 {
+        font-size: 6rem;
+        justify-content: center;
+        flex-shrink: 3;
+        flex-grow: 1;
+        ;
+        margin-top: 65%;
+        padding-top: 10%;
+    }
+
+    main h2 {
+        margin-right: -50%;
+        font-size: 4rem;
+        text-align: center;
+        margin-top: -33%;
+    }
+
+    #motto {
+        margin-top: -1%;
+        margin-right: -50%;
+        font-size: 1rem;
+        padding: 5%;
+    }
+
+    .png {
+        width: 100vw;
+        height: 100%;
+    }
+  .htmllogo {
+    width: 25vw;
+    height: 15vh;
+    align-self: center;
+    
+    margin-left: 5%;
+    margin-top: 80%;
+    position: absolute;
+
+    z-index: 3;
+
+    animation: fade-jump-fade 8s ease-in-out infinite;
+}
+
+.javalogo {
+    width:25vw;
+    height: 15vh;
+    align-self: center;
+    margin-left: 11%;
+    margin-top: 15%;
+    position: absolute;
+
+    z-index: 3;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 1s;
+}
+.pythonlogo {
+    width: 25vw;
+    height: 15vh;
+    align-self: center;
+    margin-left: 35%;
+    margin-top: 40%;
+    position: absolute;
+
+    z-index: 3;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 2s;
+}
+.linuxlogo {
+    width: 25vw;
+    height: 12vh;
+    align-self: center;
+    margin-left: 55%;
+    margin-top: 10%;
+    position: absolute;
+
+    z-index: 3;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 3s;
+}
+.sqllogo {
+    width: 25vw;
+    height: 10vh;
+    align-self: center;
+    margin-left: 35%;
+    margin-top: -25%;
+    position: absolute;
+    z-index: 3;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+.phplogo {
+    width: 25vw;
+    height: 10vh;
+    align-self: center;
+    margin-left: 65%;
+    margin-top: -36%;
+    position: absolute;
+
+    z-index: 3;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 5s;
+}
+.tialogo {
+    width: 25vw;
+    height: 8vh;
+    align-self: center;
+    margin-left: 50%;
+    margin-top: -70%;
+    position: absolute;
+
+    z-index: 3;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 6s;
+}
+.awslogo {
+    width: 25vw;
+    height: 8vh;
+    align-self: center;
+    margin-left: 75%;
+    margin-top: -80%;
+    position: absolute;
+    animation: fade-jump-fade 8s ease-in-out infinite;
+    animation-delay: 7s;
+
+    z-index: 3;
+}
+.sentencehead {
+    position: absolute;
+    top: 0%;
+    
+}
+
+    .intro-box {
+        margin-top: 10%;
+        margin-right: 0%;
+        margin-left: 0%;
+        min-width: 80%;
+        min-height: 60%;
+        margin-bottom: 60%;
+        padding: 5%;
+        padding-top: 20px;
+        overflow: wrap;
+        
+       
+        flex-shrink: 1;
+        
+    }
+    
+    #content2 {
+        display: flex;
+        margin-top: 20%;
+        width: 100%;
+        min-height: 50vh;
+        flex-shrink: 1;
+    }
+
+    #content1 {
+        width: 100%;
+        margin-top: 30%;
+    }
+
+    .content4 {
+        width: fit-content;
+        height: 50vh;
+        overflow: visible;
+        position: relative;
+        width: fit-content;
+        order: 5
+    }
+    .content5 {
+        order: 4;
+        ;
+        
+    }
+
+    .icon {
+        margin-top: 40%;
+    }
+    .screen {
+        position: absolute;
+        left: 12%;
+        top: 5%;
+        height: 270px;
+        width: 140px;
+    }
+    .phonewords {
+        font-size: 160%;
+    }
+
+}
+
+@media screen and (max-width: 365px) {
+    main h1 {
+        font-size: 4rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+        margin-right: -50%;
+    }
+    .intro-box {
+        min-width: 90%;
+        padding: 3%;
+        margin-top: 20%;
+    }
+    .screen {
+        max-height: 60%;
+        max-width: 35%;
+    }
+}
+
+
+
