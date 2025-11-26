@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 200vh;
+    background: #0c192c;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Container */
+.background-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: rotate(180deg);
+}
+
+/* Bubbles Row */
+.bubbles {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Bubble Style */
+.bubbles span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: rgba(79, 195, 220, 0.75);
+
+/* SHINY glow */
+    box-shadow:
+        0 0 12px rgba(79,195,220,0.9),
+        0 0 25px rgba(79,195,220,0.6),
+        0 0 60px rgba(79,195,220,1),
+        inset 0 0 12px rgba(255,255,255,0.9);
+
+    animation: rise 12s linear infinite;
+    animation-duration: calc(8s + (var(--i) * 5s));
+    animation-direction: alternate;
+}
+
+/* Float Animation */
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1) rotate(45deg);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-60vh) scale(1.2) rotate(90deg);
+    }
+    100% {
+        transform:translateY(-120vh) scale(0.8)  rotate(180deg);
+        opacity: 0;
+    }
+}
+
+
+
+/* Optional: Vary bubble sizes */
+.bubbles span:nth-child(odd) {
+    width: 5px;
+    height: 8px;
+    background: #0ef34f;
+    border-radius: 75%;
+    box-shadow:
+    0 0 12px rgba(255,45,117,0.9),   /* strong core glow */
+    0 0 25px rgba(255,45,117,0.6),   /* outer bloom */
+    0 0 60px rgba(255,45,117,1),     /* large neon aura */
+    inset 0 0 12px rgba(255,255,255,0.9);  /* inner white shine */
+
+    
+}
+.bubbles span:nth-child(even) {
+    border-radius: 50%;
+    width: 3px;
+    height: 6px;
+
+
+}
+
+@keyframes shine {
+    0%   { filter: brightness(1); }
+    50%  { filter: brightness(1.7); }
+    100% { filter: brightness(1); }
+}

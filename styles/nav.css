@@ -1,0 +1,150 @@
+#navBar {
+    background: rgba(2, 2, 2, 0.333);
+    
+    grid-area: navBar;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 30px;
+    border: 3px ridge #091529;
+    border-right: 5px solid #0c1e3a;
+    border-left: 5px solid #0c1e3a;
+    border-top: 5px solid #0c1e3a;
+    border-radius: 25px;
+    height: 8vh;
+
+
+}
+
+.navlinks {
+    display: flex;
+    gap: 30px;
+    animation: fade 12s ease-in-out;
+}
+
+
+.boxy {
+    position: relative;
+    margin-right: auto;
+    margin-left: 50px;
+    z-index: 100;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    color: #FFF;
+    background-color: transparent;
+    z-index: 0;
+    border-radius: 12px;
+    /* allow glow to extend outside the button edges */
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: #090909 0px 0px 1px 0px;
+    animation: buttonstar 2s ease-in-out forwards;
+    
+  
+
+}
+
+.btn::after {
+    /* dark base behind the button */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020202;
+    border-radius: 12px;
+    z-index: 0;
+    opacity: 75%;
+    pointer-events: none;
+
+transition: background-color .25s ease-in-out;
+}
+
+/* Glow Effect */
+.btn::before {
+    content: "";
+    position: absolute;
+    /* expand a bit so the blur spreads beyond the button edges */
+    top: -2px;
+    left: -1px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 1000%;
+    /* sit above the dark base but below the text */
+    z-index: 0;
+    filter: blur(12px);
+    pointer-events: none;
+
+        /* hide the glow mostly by default; animate size/opacity/blur smoothly */
+        animation: glowing 20s linear infinite;
+        transition: opacity .18s ease-in-out, top .18s ease, left .18s ease, width .18s ease, height .18s ease, filter .18s ease;
+        border-radius: 12px;
+        opacity: 0.25; /* faint edge glow by default */
+}
+
+/* On Hover: show the glow */
+.btn:hover::before {
+    /* expand and intensify the glow to cover the whole button */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .70;
+    filter: blur(15px);
+    z-index: 1 ;
+}
+
+/* Click (active) state: expand the glow further and increase blur/opacity */
+.btn:active::before {
+    top: -12px;
+    left: -12px;
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    opacity: 1;
+    filter: blur(28px);
+    z-index: 2;
+}
+
+.letters {
+    position: relative;
+    z-index: 2; /* ensure text sits above the glow */
+
+    letter-spacing: 10px;
+    
+}
+
+.btn:active::after {
+    background-color: transparent;
+
+}
+
+.btn:active .letters {
+    transform: scale(1.25);
+    
+}
+.let2 {
+    color: #ff0000;
+    font-size: 0.875rem;
+}
+
+.letE {
+    color: #ff0000;
+    font-size: 0.875rem;
+}
+li, a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.375rem;
+    color: white;
+}

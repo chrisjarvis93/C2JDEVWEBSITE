@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+    overflow: hidden;
+}
+
+/* Container */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: rotate(180deg);
+}
+
+/* Bubbles Row */
+.bubbles {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Bubble Style */
+.bubbles span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: rgba(79, 195, 220, 0.75);
+
+/* SHINY glow */
+    box-shadow:
+        0 0 12px rgba(79,195,220,0.9),
+        0 0 25px rgba(79,195,220,0.6),
+        0 0 60px rgba(79,195,220,1),
+        inset 0 0 12px rgba(255,255,255,0.9);
+
+    animation: rise 12s linear infinite;
+    animation-duration: calc(8s + (var(--i) * 5s));
+    animation-direction: alternate;
+}
+
+/* Float Animation */
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1) rotate(45deg);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-50vh) scale(1.2) rotate(90deg);
+    }
+    100% {
+        transform:translateY(-110vh) scale(0.8)  rotate(180deg);
+        opacity: 0;
+    }
+}
+
+
+
+/* Optional: Vary bubble sizes */
+.bubbles span:nth-child(odd) {
+    width: 5px;
+    height: 8px;
+    background: #0ef34f;
+    border-radius: 75%;
+    box-shadow:
+    0 0 12px rgba(255,45,117,0.9),   /* strong core glow */
+    0 0 25px rgba(255,45,117,0.6),   /* outer bloom */
+    0 0 60px rgba(255,45,117,1),     /* large neon aura */
+    inset 0 0 12px rgba(255,255,255,0.9);  /* inner white shine */
+
+    
+}
+.bubbles span:nth-child(even) {
+    border-radius: 50%;
+    width: 3px;
+    height: 6px;
+
+
+}
+
+@keyframes shine {
+    0%   { filter: brightness(1); }
+    50%  { filter: brightness(1.7); }
+    100% { filter: brightness(1); }
+}
+.boxy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    color: #FFF;
+    background-color: transparent;
+    z-index: 0;
+    border-radius: 12px;
+    /* allow glow to extend outside the button edges */
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: scale(200%);
+    box-shadow: #090909 0px 0px 1px 0px;
+    
+  
+
+}
+
+.btn::after {
+    /* dark base behind the button */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020202;
+    border-radius: 12px;
+    z-index: 0;
+    opacity: 75%;
+    pointer-events: none;
+
+transition: background-color .25s ease-in-out;
+}
+
+/* Glow Effect */
+.btn::before {
+    content: "";
+    position: absolute;
+    /* expand a bit so the blur spreads beyond the button edges */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 1000%;
+    /* sit above the dark base but below the text */
+    z-index: 0;
+
+    pointer-events: none;
+    padding: 50px;
+    filter: blur(75px);
+
+        /* hide the glow mostly by default; animate size/opacity/blur smoothly */
+        animation: glowing 20s linear infinite;
+        transition: opacity .18s ease-in-out, top .18s ease, left .18s ease, width .18s ease, height .18s ease, filter .18s ease;
+        border-radius: 12px;
+        opacity: 0.25; /* faint edge glow by default */
+
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* On Hover: show the glow */
+.btn:hover::before {
+    /* expand and intensify the glow to cover the whole button */
+    padding: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: .70;
+    filter: blur(15px);
+    z-index: 1 ;
+}
+
+/* Click (active) state: expand the glow further and increase blur/opacity */
+.btn:active::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    padding: 15px;
+    opacity: 1;
+    filter: blur(28px);
+    z-index: 2;
+}
+
+.letters {
+    position: relative;
+    z-index: 2; /* ensure text sits above the glow */
+
+    letter-spacing: 10px;
+    
+}
+
+.btn:active::after {
+    background-color: transparent;
+
+}
+
+.btn:active .letters {
+    transform: scale(1.25);
+    
+}
+.let2 {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+.letE {
+    color: #ff0000;
+    font-size: 14px;
+}
