@@ -157,7 +157,8 @@
         justify-content: center;
         flex-shrink: 3;
         flex-grow: 1;
-        ;
+        color: #fff000;
+        
         margin-top: 65%;
         padding-top: 10%;
     }
@@ -346,6 +347,8 @@
 @media screen and (max-width: 450px) {
     main h1 {
         font-size: 4rem;
+        color: brown
+;
     }
 
     main h2 {
@@ -363,9 +366,10 @@
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 400px) {
     main h1 {
         font-size: 4rem;
+        color: aqua;
     }
 
     main h2 {
