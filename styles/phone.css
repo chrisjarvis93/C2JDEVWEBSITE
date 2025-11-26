@@ -369,7 +369,7 @@
 @media screen and (max-width: 400px) {
     main h1 {
         font-size: 4rem;
-        
+        color: aqua;
     }
 
     main h2 {
@@ -378,7 +378,6 @@
     }
     .intro-box {
         min height: 100%;
-        font-size: 105%
         min-width: 90%;
         padding: 3%;
         margin-top: 20%;

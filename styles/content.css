@@ -113,11 +113,11 @@ main h2 {
 
 
 .css {
-    width: 15vw !important;
-    max-width: auto !important;
+    width: 40vw !important;
+    
     height: auto !important;
     margin-left: 0rem !important;
-    margin-top: 1rem !important;
+    margin-top: 0rem !important;
 }
 
 h3.contentstruc {
