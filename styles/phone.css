@@ -363,7 +363,7 @@
     }
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 330px) {
     main h1 {
         font-size: 4rem;
     }
@@ -383,7 +383,7 @@
         max-width: 35%;
     }
     .intro-box p {
-        font-size: 90%;
+        font-size: 80%;
     }
 }
 
