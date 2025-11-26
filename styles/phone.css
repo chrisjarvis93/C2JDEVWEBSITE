@@ -343,7 +343,7 @@
 
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 385px) {
     main h1 {
         font-size: 4rem;
     }
