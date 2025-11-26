@@ -345,7 +345,7 @@
 
 @media screen and (max-width: 385px) {
     main h1 {
-        font-size: 4rem;
+        font-size: 1rem;
     }
 
     main h2 {
@@ -365,7 +365,7 @@
 
 @media screen and (max-width: 360px) {
     main h1 {
-        font-size: 1rem;
+        font-size: 4rem;
     }
 
     main h2 {
