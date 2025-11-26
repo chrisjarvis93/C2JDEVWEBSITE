@@ -107,6 +107,8 @@ main h2 {
     border-radius: 10px;
     z-index: -2;
     animation: spin 8s linear infinite;
+    filter: drop-shadow(0 0 5px #00b7ff);
+    
 }
 
 .intro-boxinner {
@@ -146,6 +148,7 @@ main h2 {
     height: 100%;
     width: 100%;
     background-image: conic-gradient(from var(--angle), transparent 5%, #ff0000);
+    filter: drop-shadow(0px 0px 30px #ff0000);
     border-radius: 10px;
     z-index: -2;
     animation: spin 8s linear infinite;
