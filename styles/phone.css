@@ -369,7 +369,11 @@
 @media screen and (max-width: 400px) {
     main h1 {
         font-size: 4rem;
+    
   
+    }
+    #main {
+        margin-top: 10%;
     }
 
     main h2 {
