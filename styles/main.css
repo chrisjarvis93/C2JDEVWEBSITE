@@ -261,15 +261,7 @@
   }
 }
 
-li:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-  border-bottom: 2px solid #ff0000;
-  transition: transform 1s ease;
-  filter: drop-shadow(0 0 5px #ff0000);
-  
 
-}
 
 
 
