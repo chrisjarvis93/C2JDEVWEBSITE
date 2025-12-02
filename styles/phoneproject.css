@@ -1,0 +1,9 @@
+@media (max-width: 400px) {
+    .solar-system {
+        transform: scale(0.4);
+    }
+    
+    .galaxymain {
+        max-height: 60vh;
+    }
+}
