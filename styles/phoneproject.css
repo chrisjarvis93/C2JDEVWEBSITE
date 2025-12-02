@@ -1,9 +1,18 @@
+
+
+@media screen and (max-width: 1600px) {
+    .solar-system {
+        transform: scale(0.8);
+    }
+}
+
 @media (max-width: 400px) {
     .solar-system {
         transform: scale(0.4);
+
     }
     
     .galaxymain {
-        max-height: 60vh;
+        min-height: 160vh;
     }
 }

@@ -85,7 +85,9 @@ p{
     width: 140px;
     height: 140px;
     animation: orbit 2s linear infinite;
+
 }
+
 
 .venus {
     height: 50px;
@@ -287,4 +289,59 @@ p{
     width: 800px;
     height: 800px;
     animation: orbit 120s linear infinite;
+}
+
+.galaxymain h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+
+
+}
+.galaxymain p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    width: 60%;
+    z-index: 0;
+}
+
+.alien {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    width: 170px;
+    height: 250px;
+    background-image: url('../pics2/alien.png');
+    background-size: cover;
+    transform: translate(-50%, -50%) scale(0.3);
+    animation: floatAlien 4s ease-in-out infinite;
+    z-index: 100;
+}
+@keyframes floatAlien {
+    0% {
+        transform: translate(-50%, -50%) scale(0.3) translate(0, 0);
+    }
+    25% {
+        transform: translate(-50%, -50%) scale(0.3) translate(430px, -80px);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.3) translate(0, -150px);
+    }
+    75% {
+        transform: translate(-50%, -50%) scale(0.3) translate(-630px, -20px);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.3) translate(0, 0);
+    }
 }
